@@ -116,6 +116,11 @@ public class SampleActivity extends Activity {
             .build());
       }
     });
+    findViewById(R.id.progress).setOnClickListener(new OnClickListener() {
+      @Override public void onClick(View view) {
+        mgr.notify(R.id.progress, getSimple("Progress").setProgress(0, 0, true).build());
+      }
+    });
   }
 
   private NotificationCompat2.Builder getSimple(CharSequence title) {

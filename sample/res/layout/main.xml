@@ -68,5 +68,11 @@
                 android:layout_height="wrap_content"
                 android:text="Actions"
                 />
+        <Button
+                android:id="@+id/progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Progress"
+                />
     </LinearLayout>
 </ScrollView>

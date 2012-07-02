@@ -27,6 +27,7 @@ import java.util.ArrayList;
 
 import static android.os.Build.VERSION.SDK_INT;
 import static android.os.Build.VERSION_CODES.HONEYCOMB;
+import static android.os.Build.VERSION_CODES.ICE_CREAM_SANDWICH;
 import static android.os.Build.VERSION_CODES.JELLY_BEAN;
 
 public class NotificationCompat2 {
@@ -49,6 +50,8 @@ public class NotificationCompat2 {
     static {
         if (SDK_INT >= JELLY_BEAN) {
             IMPL = new NotificationCompatJellyBean();
+        } else if (SDK_INT >= ICE_CREAM_SANDWICH) {
+            IMPL = new NotificationCompatIceCreamSandwich();
         } else if (SDK_INT >= HONEYCOMB) {
             IMPL = new NotificationCompatHoneycomb();
         } else {
@@ -78,6 +81,10 @@ public class NotificationCompat2 {
         ArrayList<Integer> mActionIcons;
         ArrayList<CharSequence> mActionTitles;
         ArrayList<PendingIntent> mActionIntents;
+        int mProgress;
+        int mProgressMax;
+        boolean mProgressIndeterminate;
+        boolean mProgressSet;
 
         Notification mNotification = new Notification();
 
@@ -174,15 +181,15 @@ public class NotificationCompat2 {
 
         /**
          * Set the progress this notification represents, which may be
-         * represented as a {@link ProgressBar}.
+         * represented as a {@link android.widget.ProgressBar}.
          */
-        /* TODO
         public Builder setProgress(int max, int progress, boolean indeterminate) {
+            mProgressSet = true;
             mProgressMax = max;
             mProgress = progress;
             mProgressIndeterminate = indeterminate;
             return this;
-        }*/
+        }
 
         /**
          * Supply a custom RemoteViews to use instead of the standard one.

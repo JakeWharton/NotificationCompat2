@@ -4,7 +4,7 @@ import android.app.Notification;
 
 class NotificationCompatJellyBean implements NotificationCompat2.NotificationCompatImpl {
     static Notification.Builder createBuilder(NotificationCompat2.Builder b) {
-        final Notification.Builder builder = NotificationCompatHoneycomb.createBuilder(b);
+        final Notification.Builder builder = NotificationCompatIceCreamSandwich.createBuilder(b);
 
         if (b.mActionIcons != null) {
             final int size = b.mActionIcons.size();
