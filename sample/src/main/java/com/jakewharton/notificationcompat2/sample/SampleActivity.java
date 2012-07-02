@@ -101,22 +101,25 @@ public class SampleActivity extends Activity {
     findViewById(R.id.actions).setOnClickListener(new OnClickListener() {
       @Override public void onClick(View view) {
         mgr.notify(R.id.actions, getSimple("Actions")
-            .addAction(android.R.drawable.btn_minus, "One", null)
-            .addAction(android.R.drawable.btn_plus, "Two", null)
+            .addAction(android.R.drawable.sym_def_app_icon, "One", getPendingIntent())
+            .addAction(android.R.drawable.sym_def_app_icon, "Two", getPendingIntent())
             .build());
       }
     });
   }
 
   private NotificationCompat2.Builder getSimple(CharSequence title) {
-    Intent i = new Intent(this, SampleActivity.class);
-    i.setFlags(FLAG_ACTIVITY_CLEAR_TOP);
-    PendingIntent pi = PendingIntent.getActivity(this, 0, i, 0);
     return new NotificationCompat2.Builder(this)
         .setSmallIcon(android.R.drawable.sym_def_app_icon)
         .setTicker("Ticker: " + title)
         .setContentTitle("Title: " + title)
         .setContentText("Content Text")
-        .setContentIntent(pi);
+        .setContentIntent(getPendingIntent());
+  }
+
+  private PendingIntent getPendingIntent() {
+    Intent i = new Intent(this, SampleActivity.class);
+    i.setFlags(FLAG_ACTIVITY_CLEAR_TOP);
+    return PendingIntent.getActivity(this, 0, i, 0);
   }
 }
