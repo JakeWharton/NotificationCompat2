@@ -21,6 +21,12 @@ class NotificationCompatJellyBean implements NotificationCompat2.NotificationCom
 
     @Override
     public Notification build(NotificationCompat2.Builder b) {
+        if (b.mStyle != null) {
+            NotificationCompat2.Style style = b.mStyle;
+            b.mStyle = null; // Avoid infinite recursion
+            style.setBuilder(b);
+            return style.build();
+        }
         return createBuilder(b).build();
     }
 

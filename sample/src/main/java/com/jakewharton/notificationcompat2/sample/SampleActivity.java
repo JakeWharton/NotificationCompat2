@@ -73,6 +73,16 @@ public class SampleActivity extends Activity {
             .build());
       }
     });
+    findViewById(R.id.big_picture_api).setOnClickListener(new OnClickListener() {
+      @Override public void onClick(View view) {
+        mgr.notify(R.id.big_picture_api, getSimple("Big Picture (via API)")
+            .setStyle(new NotificationCompat2.BigPictureStyle()
+                .bigPicture(BitmapFactory.decodeResource(getResources(), R.drawable.rockaway_sunset))
+                .setBigContentTitle("Courtesy Romain Guy")
+                .setSummaryText("http://curious-creature.org"))
+            .build());
+      }
+    });
     findViewById(R.id.big_text).setOnClickListener(new OnClickListener() {
       @Override public void onClick(View view) {
         mgr.notify(R.id.big_text, new NotificationCompat2.BigTextStyle(getSimple("Big Text"))

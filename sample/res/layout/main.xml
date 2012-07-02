@@ -45,6 +45,12 @@
                 android:text="Big Picture"
                 />
         <Button
+                android:id="@+id/big_picture_api"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Big Picture (via API)"
+                />
+        <Button
                 android:id="@+id/big_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

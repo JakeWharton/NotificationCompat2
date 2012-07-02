@@ -390,12 +390,10 @@ public class NotificationCompat2 {
             return this;
         }
 
-        /* TODO
         public Builder setStyle(Style style) {
             mStyle = style;
             return this;
         }
-        */
 
         public Builder setSubText(CharSequence subtext) {
             mSubText = subtext;
