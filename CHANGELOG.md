@@ -1,8 +1,8 @@
 Change Log
 ==========
 
-Version 1.1.0 *(In Development)*
---------------------------------
+Version 1.1.0 *(2012-07-02)*
+----------------------------
 
  * Added `setStyle` and `setProgress` methods to builder.
 

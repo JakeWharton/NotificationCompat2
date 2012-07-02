@@ -8,5 +8,5 @@ fi
 rm -rf out *.jar
 mkdir out
 javac -d out -cp "$ANDROID_HOME/platforms/android-16/android.jar" src/main/java/com/jakewharton/notificationcompat2/*
-$(cd out && jar cf ../NotificationCompat2-1.0.1.jar *)
+$(cd out && jar cf ../NotificationCompat2-1.1.0.jar *)
 rm -rf out
