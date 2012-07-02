@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          android:versionCode="2"
+          android:versionName="1.2.1"
+          package="com.jakewharton.notificationcompat2.sample">
+
+    <uses-sdk android:minSdkVersion="4" android:targetSdkVersion="16"/>
+
+    <application android:label="@string/app_name">
+
+        <activity
+                android:label="@string/app_name"
+                android:name=".SampleActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>
