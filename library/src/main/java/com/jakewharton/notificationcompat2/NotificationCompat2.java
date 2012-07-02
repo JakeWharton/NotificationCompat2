@@ -373,6 +373,14 @@ public class NotificationCompat2 {
             }
         }
 
+        /**
+         * Add an action to this notification. Actions are typically displayed
+         * by the system as a button adjacent to the notification content.
+         *
+         * @param icon Resource ID of a drawable that represents the action.
+         * @param title Text describing the action.
+         * @param intent PendingIntent to be fired when the action is invoked.
+         */
         public Builder addAction(int icon, CharSequence title, PendingIntent intent) {
             if (mActionIcons == null) {
                 mActionIcons = new ArrayList<Integer>();
@@ -385,21 +393,40 @@ public class NotificationCompat2 {
             return this;
         }
 
+        /**
+         * Set the priority of this notification.
+         */
         public Builder setPriority(int priority) {
             mPriority = priority;
             return this;
         }
 
+        /**
+         * Add a rich notification style to be applied at build time.
+         */
         public Builder setStyle(Style style) {
             mStyle = style;
             return this;
         }
 
+        /**
+         * Set the third line of text in the platform notification template.
+         * Don't use if you're also using
+         * {@link #setProgress(int, int, boolean)}; they occupy the same
+         * location in the standard template.
+         */
         public Builder setSubText(CharSequence subtext) {
             mSubText = subtext;
             return this;
         }
 
+        /**
+         * Show the {@link Notification#when} field as a stopwatch. Instead of
+         * presenting {@code when} as a timestamp, the notification will show
+         * an automatically updating display of the minutes and seconds since
+         * {@code when}. Useful when showing an elapsed time (like an ongoing
+         * phone call).
+         */
         public Builder setUsesChronometer(boolean usesChronometer) {
             mUsesChronometer = usesChronometer;
             return this;
