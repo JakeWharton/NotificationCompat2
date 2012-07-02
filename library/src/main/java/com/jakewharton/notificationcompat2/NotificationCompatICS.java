@@ -13,6 +13,6 @@ class NotificationCompatICS implements NotificationCompat2.NotificationCompatImp
 
     @Override
     public Notification build(NotificationCompat2.Builder builder) {
-        return createBuilder(builder).build();
+        return createBuilder(builder).getNotification();
     }
 }
