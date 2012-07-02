@@ -2,9 +2,9 @@ package com.jakewharton.notificationcompat2;
 
 import android.app.Notification;
 
-class NotificationCompatJellyBean implements NotificationCompat2.NotificationCompatImpl {
+class NotificationCompatJB implements NotificationCompat2.NotificationCompatImpl {
     static Notification.Builder createBuilder(NotificationCompat2.Builder b) {
-        final Notification.Builder builder = NotificationCompatIceCreamSandwich.createBuilder(b);
+        final Notification.Builder builder = NotificationCompatICS.createBuilder(b);
 
         if (b.mActionIcons != null) {
             final int size = b.mActionIcons.size();

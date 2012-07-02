@@ -49,11 +49,11 @@ public class NotificationCompat2 {
 
     static {
         if (SDK_INT >= JELLY_BEAN) {
-            IMPL = new NotificationCompatJellyBean();
+            IMPL = new NotificationCompatJB();
         } else if (SDK_INT >= ICE_CREAM_SANDWICH) {
-            IMPL = new NotificationCompatIceCreamSandwich();
+            IMPL = new NotificationCompatICS();
         } else if (SDK_INT >= HONEYCOMB) {
-            IMPL = new NotificationCompatHoneycomb();
+            IMPL = new NotificationCompatHC();
         } else {
             IMPL = new NotificationCompatBase();
         }
@@ -509,7 +509,7 @@ public class NotificationCompat2 {
         public Notification build() {
             checkBuilder();
             if (SDK_INT >= JELLY_BEAN) {
-                return NotificationCompatJellyBean.buildBigPictureStyle(this);
+                return NotificationCompatJB.buildBigPictureStyle(this);
             }
             return mBuilder.build();
         }
@@ -544,7 +544,7 @@ public class NotificationCompat2 {
         public Notification build() {
             checkBuilder();
             if (SDK_INT >= JELLY_BEAN) {
-                return NotificationCompatJellyBean.buildBigTextStyle(this);
+                return NotificationCompatJB.buildBigTextStyle(this);
             }
             return mBuilder.build();
         }
@@ -582,7 +582,7 @@ public class NotificationCompat2 {
         public Notification build() {
             checkBuilder();
             if (SDK_INT >= JELLY_BEAN) {
-                return NotificationCompatJellyBean.buildInboxStyle(this);
+                return NotificationCompatJB.buildInboxStyle(this);
             }
             return mBuilder.build();
         }

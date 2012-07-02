@@ -22,7 +22,7 @@ import static android.app.Notification.FLAG_AUTO_CANCEL;
 import static android.app.Notification.FLAG_ONGOING_EVENT;
 import static android.app.Notification.FLAG_ONLY_ALERT_ONCE;
 
-class NotificationCompatHoneycomb implements NotificationCompat2.NotificationCompatImpl {
+class NotificationCompatHC implements NotificationCompat2.NotificationCompatImpl {
     static Notification.Builder createBuilder(NotificationCompat2.Builder b) {
         final Notification n = b.mNotification;
         return new Notification.Builder(b.mContext)
@@ -43,7 +43,7 @@ class NotificationCompatHoneycomb implements NotificationCompat2.NotificationCom
                 .setContentIntent(b.mContentIntent)
                 .setDeleteIntent(n.deleteIntent)
                 .setFullScreenIntent(b.mFullScreenIntent,
-                        (n.flags & Notification.FLAG_HIGH_PRIORITY) != 0)
+                    (n.flags & Notification.FLAG_HIGH_PRIORITY) != 0)
                 .setLargeIcon(b.mLargeIcon)
                 .setNumber(b.mNumber);
     }
