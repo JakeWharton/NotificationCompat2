@@ -7,10 +7,10 @@
 
     <uses-sdk android:minSdkVersion="4" android:targetSdkVersion="16"/>
 
-    <application android:label="@string/app_name">
+    <application android:label="NotificationCompat2 Sample">
 
         <activity
-                android:label="@string/app_name"
+                android:label="Notification Compat 2"
                 android:name=".SampleActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
