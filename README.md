@@ -6,7 +6,7 @@ actually supports all of the features of the Android 4.1 (Jelly Bean) release.
 
 This library is meant as a standalone replacement. Change your import from
 `android.support.v4.app.NotificationCompat` to
-`com.jakewharton.NotificationCompat2`.
+`com.jakewharton.notificationcompat2.NotificationCompat2`.
 
 Downloadable .jars can be found on the [GitHub download page][1].
 
