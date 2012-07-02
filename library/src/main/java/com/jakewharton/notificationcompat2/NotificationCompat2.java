@@ -586,5 +586,15 @@ public class NotificationCompat2 {
             }
             return mBuilder.build();
         }
+
+        public InboxStyle setBigContentTitle(CharSequence title) {
+            internalSetBigContentTitle(title);
+            return this;
+        }
+
+        public InboxStyle setSummaryText(CharSequence cs) {
+            internalSetSummaryText(cs);
+            return this;
+        }
     }
 }

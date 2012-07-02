@@ -1,6 +1,12 @@
 Change Log
 ==========
 
+Version 1.1.1 *(2012-07-02)*
+----------------------------
+
+ * Fix: Allow setting `setBigContentTitle` and `setSummaryText` on `InboxStyle`.
+
+
 Version 1.1.0 *(2012-07-02)*
 ----------------------------
 
