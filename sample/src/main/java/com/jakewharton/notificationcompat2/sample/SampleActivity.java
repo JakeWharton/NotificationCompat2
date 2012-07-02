@@ -18,11 +18,14 @@ package com.jakewharton.notificationcompat2.sample;
 
 import android.app.Activity;
 import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import com.jakewharton.notificationcompat2.NotificationCompat2;
 
+import static android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP;
 import static android.view.View.OnClickListener;
 import static com.jakewharton.notificationcompat2.NotificationCompat2.PRIORITY_HIGH;
 import static com.jakewharton.notificationcompat2.NotificationCompat2.PRIORITY_LOW;
@@ -106,10 +109,14 @@ public class SampleActivity extends Activity {
   }
 
   private NotificationCompat2.Builder getSimple(CharSequence title) {
+    Intent i = new Intent(this, SampleActivity.class);
+    i.setFlags(FLAG_ACTIVITY_CLEAR_TOP);
+    PendingIntent pi = PendingIntent.getActivity(this, 0, i, 0);
     return new NotificationCompat2.Builder(this)
         .setSmallIcon(android.R.drawable.sym_def_app_icon)
         .setTicker("Ticker: " + title)
         .setContentTitle("Title: " + title)
-        .setContentText("Content Text");
+        .setContentText("Content Text")
+        .setContentIntent(pi);
   }
 }

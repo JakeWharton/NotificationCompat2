@@ -98,7 +98,7 @@ public class NotificationCompat2 {
             // Set defaults to match the defaults of a Notification
             mNotification.when = System.currentTimeMillis();
             mNotification.audioStreamType = Notification.STREAM_DEFAULT;
-            mNotification.priority = PRIORITY_DEFAULT;
+            mPriority = PRIORITY_DEFAULT;
         }
 
         /**
