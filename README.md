@@ -4,11 +4,20 @@ NotificationCompat2
 An extension of the `NotificationCompat` helper in the support library which
 actually supports all of the features of the Android 4.1 (Jelly Bean) release.
 
-This library is meant as a standalone replacement. Change your import from
-`android.support.v4.app.NotificationCompat` to
-`com.jakewharton.notificationcompat2.NotificationCompat2`.
+With the release of Jelly Bean came a [new notification API][api] which
+provide much more dynamic and interactive notifications. The latest revision
+of the [Android Support Library][support] (revision 9) contains some classes
+to manage Android 3.x notifications but nothing for using the new Jelly Bean
+features.
 
-Downloadable .jars can be found on the [GitHub download page][1].
+This library is meant as a standalone replacement and will let you use the new
+notification API without crashing on devices with android versions previous to
+Jelly Bean. Simple change your import from
+`android.support.v4.app.NotificationCompat` to
+`com.jakewharton.notificationcompat2.NotificationCompat2` and use the
+`NotificatonCompat2.Builder` class.
+
+Downloadable .jars can be found on the [GitHub download page][dl].
 
 
 
@@ -32,4 +41,6 @@ License
 
 
 
- [1]: http://github.com/JakeWharton/NotificationCompat2/downloads
+ [dl]: http://github.com/JakeWharton/NotificationCompat2/downloads
+ [api]: http://developer.android.com/about/versions/jelly-bean.html#ui
+ [support]: http://developer.android.com/tools/extras/support-library.html
