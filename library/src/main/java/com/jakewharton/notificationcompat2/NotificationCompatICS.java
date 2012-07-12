@@ -6,7 +6,7 @@ class NotificationCompatICS implements NotificationCompat2.NotificationCompatImp
     static Notification.Builder createBuilder(NotificationCompat2.Builder b) {
         Notification.Builder builder = NotificationCompatHC.createBuilder(b);
         if (b.mProgressSet) {
-            builder.setProgress(b.mProgress, b.mProgressMax, b.mProgressIndeterminate);
+            builder.setProgress(b.mProgressMax, b.mProgress, b.mProgressIndeterminate);
         }
         return builder;
     }
