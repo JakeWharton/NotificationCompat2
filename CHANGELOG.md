@@ -1,6 +1,12 @@
 Change Log
 ==========
 
+Version 1.1.2 *(2012-07-12)*
+----------------------------
+
+ * Fix: Ensure progress and progress max is assigned correctly (Chris Banes)
+
+
 Version 1.1.1 *(2012-07-02)*
 ----------------------------
 
