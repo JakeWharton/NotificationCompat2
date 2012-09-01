@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.sonatype.oss</groupId>
+    <artifactId>oss-parent</artifactId>
+    <version>7</version>
+  </parent>
+
+  <groupId>com.jakewharton</groupId>
+  <artifactId>notificationcompat2-parent</artifactId>
+  <packaging>pom</packaging>
+  <version>1.1.2-SNAPSHOT</version>
+
+  <name>NotificationCompat2 (Parent)</name>
+  <url>https://github.com/JakeWharton/NotificationCompat2/</url>
+  <inceptionYear>2012</inceptionYear>
+
+  <modules>
+    <module>library</module>
+    <module>sample</module>
+  </modules>
+
+  <developers>
+    <developer>
+      <name>Jake Wharton</name>
+      <email>jakewharton@gmail.com</email>
+      <id>jakewharton</id>
+      <url>http://jakewharton.com</url>
+      <timezone>-5</timezone>
+      <roles>
+        <role>developer</role>
+      </roles>
+    </developer>
+  </developers>
+
+  <licenses>
+    <license>
+      <name>Apache License Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <scm>
+    <url>http://github.com/JakeWharton/NotificationCompat2/</url>
+    <connection>scm:git:git://github.com/JakeWharton/NotificationCompat2.git</connection>
+    <developerConnection>scm:git:git@github.com:JakeWharton/NotificationCompat2.git</developerConnection>
+  </scm>
+
+  <organization>
+    <name>Jake Wharton</name>
+    <url>http://jakewharton.com</url>
+  </organization>
+
+  <issueManagement>
+    <system>GitHub Issues</system>
+    <url>https://github.com/JakeWharton/NotificationCompat2/issues</url>
+  </issueManagement>
+
+  <properties>
+    <java.version>1.6</java.version>
+    <android.version>4.1.1.4</android.version>
+    <android.platform>16</android.platform>
+
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.google.android</groupId>
+        <artifactId>android</artifactId>
+        <version>${android.version}</version>
+        <scope>provided</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>2.5.1</version>
+        <configuration>
+          <source>${java.version}</source>
+          <target>${java.version}</target>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+        <artifactId>android-maven-plugin</artifactId>
+        <version>3.3.0</version>
+        <configuration>
+          <sdk>
+            <platform>${android.platform}</platform>
+          </sdk>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.3.2</version>
+        <configuration>
+          <autoVersionSubmodules>true</autoVersionSubmodules>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

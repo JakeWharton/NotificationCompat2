@@ -13,10 +13,11 @@ target
 pom.xml.*
 release.properties
 
-.idea/workspace.xml
+.idea
+*.iml
 classes
 
 obj
-*.jar
+ActivityCompat2*.jar
 
 .DS_Store
