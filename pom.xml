@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
@@ -13,7 +12,7 @@
   <groupId>com.jakewharton</groupId>
   <artifactId>notificationcompat2-parent</artifactId>
   <packaging>pom</packaging>
-  <version>1.1.2-SNAPSHOT</version>
+  <version>1.1.2</version>
 
   <name>NotificationCompat2 (Parent)</name>
   <url>https://github.com/JakeWharton/NotificationCompat2/</url>
@@ -49,6 +48,7 @@
     <url>http://github.com/JakeWharton/NotificationCompat2/</url>
     <connection>scm:git:git://github.com/JakeWharton/NotificationCompat2.git</connection>
     <developerConnection>scm:git:git@github.com:JakeWharton/NotificationCompat2.git</developerConnection>
+    <tag>1.1.2</tag>
   </scm>
 
   <organization>
