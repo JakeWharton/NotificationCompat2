@@ -27,7 +27,11 @@ class NotificationCompatJB implements NotificationCompat2.NotificationCompatImpl
             style.setBuilder(b);
             return style.build();
         }
-        return createBuilder(b).build();
+        Notification n = createBuilder(b).build();
+        if (b.mBigContentView != null) {
+        	n.bigContentView = b.mBigContentView;
+        }
+        return n;
     }
 
     static Notification buildBigPictureStyle(NotificationCompat2.BigPictureStyle s) {
