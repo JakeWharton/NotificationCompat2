@@ -74,5 +74,11 @@
                 android:layout_height="wrap_content"
                 android:text="Progress"
                 />
+         <Button
+                android:id="@+id/big_content_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Custom layout"
+                />
     </LinearLayout>
 </ScrollView>

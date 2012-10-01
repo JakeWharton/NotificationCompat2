@@ -23,7 +23,10 @@ import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.RemoteViews;
+
 import com.jakewharton.notificationcompat2.NotificationCompat2;
+import com.jakewharton.notificationcompat2.sample.R;
 
 import static android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP;
 import static android.view.View.OnClickListener;
@@ -121,6 +124,17 @@ public class SampleActivity extends Activity {
         mgr.notify(R.id.progress, getSimple("Progress").setProgress(0, 0, true).build());
       }
     });
+    
+    
+    findViewById(R.id.big_content_view).setOnClickListener(new OnClickListener() {
+        @Override public void onClick(View view) {
+        	RemoteViews mExpandedView = new RemoteViews(getPackageName(), R.layout.big_content_view);
+        	mExpandedView.setTextViewText(R.id.text, "Big Content View");
+          mgr.notify(R.id.actions, getSimple("Big Content View")
+                     .setBigContentView(mExpandedView)
+              .build());
+        }
+      });
   }
 
   private NotificationCompat2.Builder getSimple(CharSequence title) {
