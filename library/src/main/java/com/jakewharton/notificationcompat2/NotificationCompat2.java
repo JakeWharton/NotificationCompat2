@@ -71,6 +71,7 @@ public class NotificationCompat2 {
         PendingIntent mContentIntent;
         PendingIntent mFullScreenIntent;
         RemoteViews mTickerView;
+        RemoteViews mBigContentView;
         Bitmap mLargeIcon;
         CharSequence mContentInfo;
         int mNumber;
@@ -196,6 +197,16 @@ public class NotificationCompat2 {
          */
         public Builder setContent(RemoteViews views) {
             mNotification.contentView = views;
+            return this;
+        }        
+
+        /**
+         * Supply a BigContenViews that will be used in Jelly Bean to display the expanded notification
+         * Remember that it will be displayed alongside native notifications, so making this RemoteView very different
+         * from the original ones is a bad idea.
+         */
+        public Builder setBigContentView(RemoteViews bigContentViews) {
+            mBigContentView = bigContentViews;
             return this;
         }
 
